@@ -1,16 +1,32 @@
 body { background-color: lightblue;
 }
 
+h1 {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
 #container {
-    display: flex;
-    width: 500px;
-    height: 500px;
-    flex-wrap: wrap;
-    flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 1 / 1;  
+  margin: 0 auto;        
+  border: 2px solid #333;
 }
 
 .square {
-    width: calc(100% / 16);
-    height: calc(100% / 16);
-    border: 1px solid #eee;
+  box-sizing: border-box;
+  border: 1px solid #eee;  
+}
+
+#resizeBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 2px;
 }
