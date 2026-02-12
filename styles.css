@@ -19,8 +19,10 @@ h1 {
 
 .square {
   box-sizing: border-box;
-  border: 1px solid #eee;  
+  aspect-ratio: 1 / 1;
+  border: 1px solid #eee;
 }
+
 
 #resizeBtn {
   display: block;

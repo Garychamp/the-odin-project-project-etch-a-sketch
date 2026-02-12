@@ -8,13 +8,16 @@ function createGrid(size) {
     square.classList.add('square');
 
     square.style.width = `${100 / size}%`;
-    square.style.height = `${100 / size}%`;
+
+    square.dataset.hover = 0;
 
     square.addEventListener('mouseover', () => {
-      const r = randomNumber(0, 255);
-      const g = randomNumber(0, 255);
-      const b = randomNumber(0, 255);
-      square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    let hoverCount = Number(square.dataset.hover);
+    if (hoverCount < 10) hoverCount++;
+    square.dataset.hover = hoverCount;
+
+    const opacity = hoverCount / 10;
+    square.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
     });
 
     container.appendChild(square);
